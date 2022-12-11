@@ -8,9 +8,15 @@ function makeSquares(size){
     let div = document.createElement('div');
     div.classList.add('box');
     div.innerText = counter;
+    div.addEventListener("mouseover", changeColour);
     container.appendChild(div);
     counter += 1;
   }
+}
+
+function changeColour(event){
+  event.target.style.backgroundColor = 'black';
+
 }
 
 makeSquares(16);
