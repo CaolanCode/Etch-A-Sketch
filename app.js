@@ -1,10 +1,13 @@
 const container = document.getElementById('container');
+let counter = 1;
+let htmlText = "";
 
-function makeCols(size){
+function makeSquares(size){
   for(let i = 0; i < size; i++){
-    let column = document.createElement('div');
-    container.appendChild(column);
+    htmlText += '<div class="box">' + counter + '</div>';
+    counter += 1;
   }
+  container.innerHTML = htmlText;
 }
 
-makeCols(16);
+makeSquares(256);
