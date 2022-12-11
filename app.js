@@ -1,13 +1,16 @@
 const container = document.getElementById('container');
 let counter = 1;
-let htmlText = "";
 
 function makeSquares(size){
-  for(let i = 0; i < size; i++){
-    htmlText += '<div class="box">' + counter + '</div>';
+  container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+  for(let i = 0; i < (size * size); i++){
+    let div = document.createElement('div');
+    div.classList.add('box');
+    div.innerText = counter;
+    container.appendChild(div);
     counter += 1;
   }
-  container.innerHTML = htmlText;
 }
 
-makeSquares(256);
+makeSquares(16);
