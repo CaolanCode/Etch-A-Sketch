@@ -6,9 +6,23 @@ body{
 }
 #container{
   display: grid;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 .box{
   border: 1px black solid;
-
+}
+#button-container{
+  display: flex;
+  justify-content: center;
+  border: 1px black solid;
+  gap:30px;
+  min-height: 5vh;
+  background-color: red;
+}
+.button{
+  padding: 0 30px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  border: none;
 }
