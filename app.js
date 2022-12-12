@@ -1,5 +1,4 @@
 const container = document.getElementById('container');
-const cleaerButton = document.getElementById('clearButton')
 
 function makeSquares(size){
   container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -16,10 +15,6 @@ function changeColour(event){
   event.target.style.backgroundColor = 'black';
 }
 
-document.getElementById('startButton').addEventListener('click', getGridSize);
-document.getElementById('clearButton').addEventListener('click', getGridSize);
-
-
 function getGridSize(){
   let size = parseInt(prompt("Enter the grid size, 1-100:"));
   while(size > 100){
@@ -27,4 +22,9 @@ function getGridSize(){
   }
   makeSquares(size);
 }
+
+function clearScreen(){
+  container.innerHTML = "";
+}
+
 
